@@ -67,7 +67,7 @@ void flushSerial(FlushDirection direction);
 private:
 int _fd;
 bool _isOpenFlag;
-static const int _poll_attempts = 50;
+static const int _poll_attempts = 15;
 
 /* Globals */
 
