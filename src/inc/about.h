@@ -24,18 +24,20 @@
  *
  */
 
-#include "inc/freeems_loader.h"
+#ifndef ABOUT_H
+#define ABOUT_H
 
-#include <QtGui>
-#include <QApplication>
+#include "ui_about.h"
 
-int main(int argc, char *argv[]) {
-	QApplication a(argc, argv);
-	FreeEMS_Loader w;
-	if (w.showHelp) {
-		cout << " help requested ";
-		return 2;
-	}
-	w.show();
-	return a.exec();
-}
+class About: public QDialog, public Ui::AboutForm 
+{
+public:
+	About(QWidget *parent = 0);
+	~About();
+};
+
+#else
+/* let us know if we are being untidy with headers */
+#warning "Header file ABOUT_H seen before, sort it out!"
+/* end of the wrapper ifdef from the very top */
+#endif

@@ -1,6 +1,5 @@
 /FreeEMS_Loader
 /FreeEMS_Loader.app/*
-/ui_freeems_loader.h
 /debug/*
 /release/*
 /.project
@@ -9,3 +8,6 @@
 /qrc_resource-root.cpp
 /moc_freeems_loader.cpp
 /*.o
+/*.out
+/moc*.cpp
+/ui_*.h
